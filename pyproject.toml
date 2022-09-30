@@ -1,0 +1,19 @@
+[tool.setuptools_scm] # enable setuptools_scm
+
+[project]
+name = "sct_example_data"
+description = "Data used to demonstrate spinalcordtoolbox"
+readme = "README.md"
+requires-python = ">=3.7"
+dependencies = [
+]
+dynamic = ["version"] # read version from git via setuptools_scm
+
+[tool.setuptools.packages.find]
+include = ["sct_example_data"]
+exclude = ["build"]
+
+[build-system]
+requires = ["setuptools>=61","setuptools_scm[toml]"]
+# setuptools 61 is the earliest to support keeping metadata in this file
+
